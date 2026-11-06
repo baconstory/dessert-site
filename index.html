@@ -21,6 +21,10 @@
     .hero-aside strong{display:block;color:var(--ink);font:500 19px var(--serif);margin-bottom:8px}
     .section-head{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--ink);padding:17px 0 22px}
     .section-head h2{font:500 22px var(--serif);margin:0}.section-head span{font-size:11px;color:var(--muted);letter-spacing:.12em}
+    .tools{display:flex;gap:10px;align-items:center;margin:-5px 0 20px;flex-wrap:wrap}
+    .search{flex:1 1 220px;position:relative}.search input{width:100%;height:44px;border:1px solid var(--line);background:#fffdf8;padding:0 14px 0 40px;font:13px var(--sans);color:var(--ink);outline:none}.search input:focus{border-color:var(--olive);box-shadow:0 0 0 2px #747b5522}.search:before{content:'⌕';position:absolute;left:14px;top:4px;font-size:24px;color:var(--muted)}
+    .tool-button{height:44px;border:1px solid var(--line);background:transparent;padding:0 15px;font:600 12px var(--sans);color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s}.tool-button:hover,.tool-button.active{background:#ede6da;border-color:var(--olive)}.tool-button.primary{background:var(--red);border-color:var(--red);color:#fff}.tool-button.primary:hover{background:#963d2b}
+    .tool-button .heart{color:var(--red);font-size:16px;vertical-align:-1px;margin-right:4px}.result-note{font-size:11px;color:var(--muted);margin:-8px 0 14px;min-height:16px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:76px}
     .card{display:block;text-decoration:none;position:relative;overflow:hidden;background:#e4ddd1;min-height:300px;isolation:isolate}
     .card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s;z-index:-2}
@@ -29,6 +33,9 @@
     .card-copy{position:absolute;bottom:0;left:0;right:0;padding:22px;color:white}
     .card-copy small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#f0d7b6}.card-copy h3{font:500 25px var(--serif);margin:4px 0 2px}.card-copy p{margin:0;font-size:12px;color:#eee7dd}
     .card-index{position:absolute;top:14px;left:15px;color:white;font-size:11px;letter-spacing:.12em;text-shadow:0 1px 8px #333}
+    .card-link{position:absolute;inset:0;z-index:1;display:block;color:#fff;text-decoration:none}.card-link .card-copy{z-index:1}
+    .favorite{position:absolute;right:13px;top:12px;z-index:2;width:38px;height:38px;border:1px solid #ffffff9c;border-radius:50%;background:#25231f66;color:#fff;font-size:19px;cursor:pointer;backdrop-filter:blur(4px);transition:transform .2s,background .2s}.favorite:hover{transform:scale(1.08)}.favorite.saved{background:#fff;color:var(--red);border-color:#fff}
+    .empty-state{grid-column:1/-1;padding:35px 20px;text-align:center;color:var(--muted);border:1px dashed var(--line);font:16px var(--serif)}
     #detail{display:none;border-top:1px solid var(--ink);padding:30px 0 80px;scroll-margin-top:20px}
     #detail.open{display:block;animation:appear .35s ease}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
     .detail-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.back{border:0;background:none;padding:8px 0;color:var(--red);font:600 12px var(--sans);cursor:pointer;letter-spacing:.04em}.back:hover{text-decoration:underline}
@@ -40,8 +47,10 @@
     .taste{font:500 19px/1.65 var(--serif);border-left:2px solid var(--red);padding:1px 0 1px 17px;margin-bottom:28px}
     .fact{display:grid;grid-template-columns:78px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line);font-size:13px}.fact b{font-size:10px;letter-spacing:.12em;color:var(--olive);padding-top:3px}.fact p{margin:0;color:#5e594f}
     .source{display:inline-block;margin-top:21px;font-size:11px;color:var(--muted);text-underline-offset:3px}
+    .chat-section{border-top:1px solid var(--ink);padding:32px 0 75px}.chat-section .section-head{border:0;padding:0 0 18px}.chat-card{max-width:720px;border:1px solid var(--line);background:#fffdf8;padding:22px}.chat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.chat-top strong{font:500 18px var(--serif)}.chat-status{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:7px}.chat-status:before{content:'';width:7px;height:7px;border-radius:50%;background:#aaa}.chat-status.online:before{background:#53865a;box-shadow:0 0 0 3px #53865a22}.chat-log{height:260px;overflow:auto;border:1px solid var(--line);background:var(--paper);padding:14px;margin-bottom:12px;display:flex;flex-direction:column;gap:10px}.chat-empty{margin:auto;color:var(--muted);font:14px var(--serif);text-align:center}.chat-message{max-width:85%;align-self:flex-start}.chat-message.mine{align-self:flex-end;text-align:right}.chat-meta{font-size:10px;color:var(--muted);margin:0 0 3px}.chat-bubble{display:inline-block;padding:8px 12px;background:#fff;border:1px solid var(--line);font-size:13px;word-break:break-word;text-align:left}.mine .chat-bubble{background:#f2e2d8;border-color:#e6c8b9}.chat-form{display:grid;grid-template-columns:150px 1fr auto;gap:8px}.chat-form input{height:42px;min-width:0;border:1px solid var(--line);background:#fff;padding:0 11px;font:13px var(--sans);outline:none}.chat-form input:focus{border-color:var(--olive)}.chat-form button{height:42px;border:0;background:var(--red);color:white;padding:0 16px;font:600 12px var(--sans);cursor:pointer}.chat-form button:disabled{opacity:.5;cursor:not-allowed}.chat-help{font-size:10px;color:var(--muted);margin:10px 0 0}
     footer{border-top:1px solid var(--line);padding:25px 0 35px;display:flex;justify-content:space-between;color:var(--muted);font-size:11px}
-    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}header{height:64px}.top-note{font-size:9px}.hero{padding:53px 0 36px;grid-template-columns:1fr;gap:24px}.hero-aside{padding-left:16px}.grid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:55px}.card{min-height:250px}.card-copy{padding:16px}.card-copy h3{font-size:20px}.detail-grid{grid-template-columns:1fr;gap:23px}.detail-photo{position:static}.detail-photo img{height:min(74vw,430px)}.detail-copy{padding-top:0}footer{gap:16px;flex-direction:column}}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}header{height:64px}.top-note{font-size:9px}.hero{padding:53px 0 36px;grid-template-columns:1fr;gap:24px}.hero-aside{padding-left:16px}.grid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:55px}.card{min-height:250px}.card-copy{padding:16px}.card-copy h3{font-size:20px}.tool-button{flex:1}.search{flex-basis:100%}.detail-grid{grid-template-columns:1fr;gap:23px}.detail-photo{position:static}.detail-photo img{height:min(74vw,430px)}.detail-copy{padding-top:0}footer{gap:16px;flex-direction:column}}
+    @media(max-width:560px){.chat-card{padding:15px}.chat-form{grid-template-columns:1fr auto}.chat-form #chatName{grid-column:1/-1}.chat-log{height:230px}}
     @media(max-width:430px){.grid{grid-template-columns:1fr}.card{min-height:310px}.section-head h2{font-size:19px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
   </style>
@@ -54,8 +63,27 @@
       <aside class="hero-aside"><strong>어디부터 맛볼까요?</strong>사진이 있는 디저트 카드를 누르면 그 한 입에 얽힌 유래와 역사가 펼쳐집니다.</aside>
     </section>
     <div class="section-head"><h2>오늘의 디저트 다섯 가지</h2><span>CLICK TO TASTE&nbsp; ↗</span></div>
+    <div class="tools" aria-label="디저트 탐색 도구">
+      <label class="search"><input id="searchInput" type="search" placeholder="디저트나 나라를 검색해 보세요" autocomplete="off" aria-label="디저트 검색"></label>
+      <button class="tool-button primary" id="randomButton" type="button">오늘의 디저트 뽑기 ↗</button>
+      <button class="tool-button" id="favoritesButton" type="button" aria-pressed="false"><span class="heart">♥</span>찜한 디저트 <span id="favoriteCount">0</span></button>
+    </div>
+    <p class="result-note" id="resultNote" aria-live="polite"></p>
     <section class="grid" aria-label="유럽 디저트 목록" id="cards"></section>
     <section id="detail" aria-live="polite"></section>
+    <section class="chat-section" id="chat">
+      <div class="section-head"><h2>지금 같이 먹는 사람들</h2><span>LIVE CHAT</span></div>
+      <div class="chat-card">
+        <div class="chat-top"><strong>달콤한 수다</strong><span class="chat-status" id="chatStatus">연결 설정 필요</span></div>
+        <div class="chat-log" id="chatLog" role="log" aria-live="polite"><p class="chat-empty">채팅 연결을 준비하고 있어요.</p></div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatName" maxlength="24" placeholder="닉네임" aria-label="닉네임" autocomplete="nickname">
+          <input id="chatText" maxlength="300" placeholder="디저트 이야기를 나눠 보세요" aria-label="메시지" autocomplete="off">
+          <button id="chatSend" type="submit" disabled>보내기</button>
+        </form>
+        <p class="chat-help" id="chatHelp">실시간 채팅을 켜려면 Firebase 프로젝트 연결이 필요합니다.</p>
+      </div>
+    </section>
   </main>
   <footer class="wrap"><span>작은 한 입, 긴 여행.</span><span>사진 출처는 각 이미지 아래에서 확인할 수 있어요.</span></footer>
 <script>
@@ -68,9 +96,24 @@ const desserts=[
 ];
 const cards=document.querySelector('#cards'),detail=document.querySelector('#detail');
 function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-cards.innerHTML=desserts.map((d,i)=>`<a class="card" href="#${d.id}" data-id="${d.id}" aria-label="${d.name} 이야기 보기"><img loading="lazy" src="${d.image}" alt="${d.name} 사진"><span class="card-index">0${i+1} / 05</span><div class="card-copy"><small>${d.place}</small><h3>${d.name}</h3><p>${d.tag}</p></div></a>`).join('');
-function show(id){const d=desserts.find(x=>x.id===id);if(!d){detail.classList.remove('open');detail.innerHTML='';return}const n=desserts.indexOf(d)+1;detail.innerHTML=`<div class="detail-top"><button class="back" type="button">← 디저트 목록</button><span class="detail-count">DESSERT ${String(n).padStart(2,'0')} / 05</span></div><div class="detail-grid"><div class="detail-photo"><img src="${d.image}" alt="${esc(d.name)} 사진"><p class="credit">사진: <a href="${d.photoLink}" target="_blank" rel="noreferrer">${esc(d.photo)}</a> · Wikimedia Commons</p></div><article class="detail-copy"><p class="eyebrow">${esc(d.place)}</p><h2>${esc(d.name)}</h2><p class="roman">${esc(d.original)}</p><p class="taste">${esc(d.taste)}</p><div class="fact"><b>한입 맛보기</b><p>${esc(d.tag)}. 사진처럼 생긴 모양과 달콤한 식감이 이 디저트의 매력이에요.</p></div><div class="fact"><b>유래와 역사</b><p>${esc(d.history)}</p></div><div class="fact"><b>기억할 연도</b><p>${esc(d.year)}</p></div><a class="source" href="${d.source}" target="_blank" rel="noreferrer">역사 출처 읽기 ↗ · ${esc(d.sourceLabel)}</a></article></div>`;detail.classList.add('open');detail.scrollIntoView({behavior:'smooth',block:'start'});detail.querySelector('.back').addEventListener('click',()=>{history.pushState(null,'',location.pathname+location.search);detail.classList.remove('open');detail.innerHTML='';document.querySelector('#cards').scrollIntoView({behavior:'smooth',block:'start'})})}
-function route(){show(location.hash.slice(1))}window.addEventListener('hashchange',route);route();
+const searchInput=document.querySelector('#searchInput'),favoritesButton=document.querySelector('#favoritesButton'),favoriteCount=document.querySelector('#favoriteCount'),resultNote=document.querySelector('#resultNote');
+let saved=new Set();
+try{saved=new Set(JSON.parse(localStorage.getItem('dessert-favorites')||'[]'))}catch{}
+let favoritesOnly=false,lastRandom='',detailHasHistory=false;
+function saveFavorites(){try{localStorage.setItem('dessert-favorites',JSON.stringify([...saved]))}catch{}favoriteCount.textContent=saved.size}
+function renderCards(){const q=searchInput.value.trim().toLocaleLowerCase();const shown=desserts.filter(d=>(!favoritesOnly||saved.has(d.id))&&(!q||[d.name,d.original,d.place,d.tag].join(' ').toLocaleLowerCase().includes(q)));
+  cards.innerHTML=shown.length?shown.map(d=>{const i=desserts.indexOf(d),isSaved=saved.has(d.id);return `<article class="card"><img loading="lazy" src="${d.image}" alt="${esc(d.name)} 사진"><a class="card-link" href="#${d.id}" aria-label="${esc(d.name)} 이야기 보기"><span class="card-index">0${i+1} / 05</span><div class="card-copy"><small>${esc(d.place)}</small><h3>${esc(d.name)}</h3><p>${esc(d.tag)}</p></div></a><button class="favorite${isSaved?' saved':''}" type="button" data-favorite="${d.id}" aria-label="${isSaved?'찜 취소':'찜하기'}: ${esc(d.name)}" aria-pressed="${isSaved}">${isSaved?'♥':'♡'}</button></article>`}).join(''):'<div class="empty-state">조건에 맞는 디저트가 없어요. 검색어를 바꿔 보세요.</div>';
+  resultNote.textContent=favoritesOnly?`찜한 디저트 ${shown.length}개를 보여드려요.`:`${shown.length}개의 달콤한 이야기를 찾았어요.`;saveFavorites();
+}
+function toggleFavorite(id){if(saved.has(id))saved.delete(id);else saved.add(id);renderCards();if(location.hash==='#'+id&&detail.classList.contains('open'))show(id,false)}
+function show(id,scroll=true){const d=desserts.find(x=>x.id===id);if(!d){detail.classList.remove('open');detail.innerHTML='';return}const n=desserts.indexOf(d)+1,isSaved=saved.has(d.id);detail.innerHTML=`<div class="detail-top"><button class="back" type="button">← 디저트 목록</button><span class="detail-count">DESSERT ${String(n).padStart(2,'0')} / 05</span></div><div class="detail-grid"><div class="detail-photo"><img src="${d.image}" alt="${esc(d.name)} 사진"><p class="credit">사진: <a href="${d.photoLink}" target="_blank" rel="noreferrer">${esc(d.photo)}</a> · Wikimedia Commons</p></div><article class="detail-copy"><p class="eyebrow">${esc(d.place)}</p><h2>${esc(d.name)}</h2><p class="roman">${esc(d.original)}</p><p class="taste">${esc(d.taste)}</p><button class="tool-button detail-favorite${isSaved?' active':''}" type="button" aria-pressed="${isSaved}">${isSaved?'♥ 찜했어요':'♡ 이 디저트 찜하기'}</button><div class="fact"><b>한입 맛보기</b><p>${esc(d.tag)}. 사진처럼 생긴 모양과 달콤한 식감이 이 디저트의 매력이에요.</p></div><div class="fact"><b>유래와 역사</b><p>${esc(d.history)}</p></div><div class="fact"><b>기억할 연도</b><p>${esc(d.year)}</p></div><a class="source" href="${d.source}" target="_blank" rel="noreferrer">역사 출처 읽기 ↗ · ${esc(d.sourceLabel)}</a></article></div>`;detail.classList.add('open');if(scroll)detail.scrollIntoView({behavior:'smooth',block:'start'});detail.querySelector('.back').addEventListener('click',()=>{history.pushState(null,'',location.pathname+location.search);detail.classList.remove('open');detail.innerHTML='';document.querySelector('#cards').scrollIntoView({behavior:'smooth',block:'start'})});detail.querySelector('.detail-favorite').addEventListener('click',()=>toggleFavorite(d.id))}
+cards.addEventListener('click',event=>{const button=event.target.closest('[data-favorite]');if(button){event.preventDefault();toggleFavorite(button.dataset.favorite);return}if(event.target.closest('.card-link'))detailHasHistory=true});
+detail.addEventListener('click',event=>{if(!event.target.closest('.back'))return;event.stopImmediatePropagation();if(detailHasHistory){history.back();return}history.replaceState(null,'',location.pathname+location.search);detailHasHistory=false;route()},true);
+searchInput.addEventListener('input',renderCards);
+favoritesButton.addEventListener('click',()=>{favoritesOnly=!favoritesOnly;favoritesButton.classList.toggle('active',favoritesOnly);favoritesButton.setAttribute('aria-pressed',favoritesOnly);renderCards()});
+document.querySelector('#randomButton').addEventListener('click',()=>{let pool=desserts.filter(d=>d.id!==lastRandom);if(!pool.length)pool=desserts;const pick=pool[Math.floor(Math.random()*pool.length)];lastRandom=pick.id;detailHasHistory=true;location.hash=pick.id});
+saveFavorites();renderCards();
+function route(){const id=location.hash.slice(1);if(!id){detailHasHistory=false;show('');cards.scrollIntoView({behavior:'smooth',block:'start'});return}show(id)}window.addEventListener('hashchange',route);route();
 </script>
 </body>
 </html>
