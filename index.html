@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ec">
+  <title>달콤한 유럽 산책 — 낯선 디저트 다섯 가지</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+    :root{--paper:#f7f3ec;--ink:#28251f;--muted:#797266;--red:#b64f37;--line:#ddd5c8;--olive:#747b55;--serif:'Noto Serif KR',Georgia,serif;--sans:'DM Sans','Noto Sans KR',sans-serif}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7}
+    a{color:inherit} .wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+    header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;letter-spacing:.06em;text-decoration:none}.brand span{color:var(--red)}
+    .top-note{font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    .hero{padding:78px 0 54px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end}
+    .eyebrow{font-size:11px;letter-spacing:.2em;color:var(--red);font-weight:700;text-transform:uppercase;margin:0 0 18px}
+    h1,h2,h3,p{margin-top:0} h1{font:500 clamp(40px,6vw,74px)/1.16 var(--serif);letter-spacing:-.06em;margin-bottom:22px}
+    h1 em{font-style:normal;color:var(--red)} .intro{max-width:470px;color:var(--muted);margin:0;font-size:15px}
+    .hero-aside{border-left:1px solid var(--line);padding:4px 0 4px 28px;color:var(--muted);font-size:13px}
+    .hero-aside strong{display:block;color:var(--ink);font:500 19px var(--serif);margin-bottom:8px}
+    .section-head{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--ink);padding:17px 0 22px}
+    .section-head h2{font:500 22px var(--serif);margin:0}.section-head span{font-size:11px;color:var(--muted);letter-spacing:.12em}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:76px}
+    .card{display:block;text-decoration:none;position:relative;overflow:hidden;background:#e4ddd1;min-height:300px;isolation:isolate}
+    .card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s;z-index:-2}
+    .card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(22,19,15,.78));z-index:-1}
+    .card:hover img,.card:focus-visible img{transform:scale(1.045)}
+    .card-copy{position:absolute;bottom:0;left:0;right:0;padding:22px;color:white}
+    .card-copy small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#f0d7b6}.card-copy h3{font:500 25px var(--serif);margin:4px 0 2px}.card-copy p{margin:0;font-size:12px;color:#eee7dd}
+    .card-index{position:absolute;top:14px;left:15px;color:white;font-size:11px;letter-spacing:.12em;text-shadow:0 1px 8px #333}
+    #detail{display:none;border-top:1px solid var(--ink);padding:30px 0 80px;scroll-margin-top:20px}
+    #detail.open{display:block;animation:appear .35s ease}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .detail-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.back{border:0;background:none;padding:8px 0;color:var(--red);font:600 12px var(--sans);cursor:pointer;letter-spacing:.04em}.back:hover{text-decoration:underline}
+    .detail-count{font-size:11px;color:var(--muted);letter-spacing:.12em}
+    .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .detail-photo{position:sticky;top:22px}.detail-photo img{display:block;width:100%;height:470px;object-fit:cover;background:#e4ddd1}
+    .credit{font-size:10px;color:var(--muted);margin:8px 0 0}.credit a{color:inherit}
+    .detail-copy{padding:7px 0}.detail-copy h2{font:500 clamp(34px,4vw,54px)/1.2 var(--serif);letter-spacing:-.05em;margin:4px 0 4px}.roman{font:italic 15px Georgia,serif;color:var(--red);margin-bottom:25px}
+    .taste{font:500 19px/1.65 var(--serif);border-left:2px solid var(--red);padding:1px 0 1px 17px;margin-bottom:28px}
+    .fact{display:grid;grid-template-columns:78px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line);font-size:13px}.fact b{font-size:10px;letter-spacing:.12em;color:var(--olive);padding-top:3px}.fact p{margin:0;color:#5e594f}
+    .source{display:inline-block;margin-top:21px;font-size:11px;color:var(--muted);text-underline-offset:3px}
+    footer{border-top:1px solid var(--line);padding:25px 0 35px;display:flex;justify-content:space-between;color:var(--muted);font-size:11px}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}header{height:64px}.top-note{font-size:9px}.hero{padding:53px 0 36px;grid-template-columns:1fr;gap:24px}.hero-aside{padding-left:16px}.grid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:55px}.card{min-height:250px}.card-copy{padding:16px}.card-copy h3{font-size:20px}.detail-grid{grid-template-columns:1fr;gap:23px}.detail-photo{position:static}.detail-photo img{height:min(74vw,430px)}.detail-copy{padding-top:0}footer{gap:16px;flex-direction:column}}
+    @media(max-width:430px){.grid{grid-template-columns:1fr}.card{min-height:310px}.section-head h2{font-size:19px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap"><a class="brand" href="#top">BON <span>APPÉTIT</span></a><div class="top-note">유럽의 달콤한 구석구석 · Vol. 01</div></header>
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div><p class="eyebrow">A little dessert atlas</p><h1>낯설어서 더<br><em>맛있는</em> 유럽</h1><p class="intro">바삭한 파이부터 스파게티처럼 생긴 아이스크림까지. 유럽 골목에서 태어난 달콤한 이야기 다섯 가지를 골랐어요.</p></div>
+      <aside class="hero-aside"><strong>어디부터 맛볼까요?</strong>사진이 있는 디저트 카드를 누르면 그 한 입에 얽힌 유래와 역사가 펼쳐집니다.</aside>
+    </section>
+    <div class="section-head"><h2>오늘의 디저트 다섯 가지</h2><span>CLICK TO TASTE&nbsp; ↗</span></div>
+    <section class="grid" aria-label="유럽 디저트 목록" id="cards"></section>
+    <section id="detail" aria-live="polite"></section>
+  </main>
+  <footer class="wrap"><span>작은 한 입, 긴 여행.</span><span>사진 출처는 각 이미지 아래에서 확인할 수 있어요.</span></footer>
+<script>
+const desserts=[
+ {id:'nata',name:'파스텔 드 나타',original:'Pastel de Nata',place:'포르투갈 · 리스본',tag:'바삭한 커스터드 타르트',image:'https://commons.wikimedia.org/wiki/Special:FilePath/Pastel_De_Nata.jpg?width=1200',photo:'Wikimedia Commons · TheDumpy',photoLink:'https://commons.wikimedia.org/wiki/File:Pastel_De_Nata.jpg',taste:'겹겹이 부서지는 페이스트리 안에 달걀 노른자 커스터드가 보들하게 차 있어요. 따뜻할 때 시나몬을 살짝 뿌려 한 입!',history:'리스본 벨렝 지구의 제로니무스 수도원과 연결된 달콤한 타르트예요. 수도원 폐쇄 뒤 생계를 위해 수도원에서 만든 과자를 근처에서 팔기 시작했고, 1837년 정유소 옆 건물에서 파스테이스 드 벨렝의 생산이 시작됐다고 전해져요. 다른 곳에서 만나는 비슷한 타르트는 보통 파스텔 드 나타라고 불러요.',year:'1837년 벨렝에서 판매 시작',source:'https://pasteisdebelem.pt/en/history/',sourceLabel:'Pastéis de Belém 공식 역사'},
+ {id:'kouign',name:'쿠이냐만',original:'Kouign-amann',place:'프랑스 · 브르타뉴',tag:'버터와 설탕의 겹겹 파이',image:'https://commons.wikimedia.org/wiki/Special:FilePath/Kouign_amann.jpg?width=1200',photo:'Wikimedia Commons · Fanny Schertzer',photoLink:'https://commons.wikimedia.org/wiki/File:Kouign_amann.jpg',taste:'발음부터 낯선 이름은 브르타뉴어로 ‘케이크’와 ‘버터’를 뜻해요. 바깥은 설탕이 캐러멜처럼 바삭하고, 속은 버터 향이 진하고 촉촉해요.',history:'브르타뉴의 항구 도시 두아르느네에서 태어난 지역 과자입니다. 효모 반죽에 버터와 설탕을 접어 넣고 구워 층층이 부풀게 만들어요. 이름부터 재료까지 버터를 아끼지 않는 브르타뉴식 간식의 매력을 보여줍니다.',year:'19세기 브르타뉴의 지역 과자',source:'https://www.nytimes.com/2011/04/27/dining/27kouign.html',sourceLabel:'The New York Times · 브르타뉴의 쿠이냐만'},
+ {id:'spaghetti',name:'슈파게티아이스',original:'Spaghettieis',place:'독일 · 만하임',tag:'파스타를 닮은 아이스크림',image:'https://commons.wikimedia.org/wiki/Special:FilePath/Spaghettieis_%28fcm%29.jpg?width=1200',photo:'Wikimedia Commons · Frank C. Müller',photoLink:'https://commons.wikimedia.org/wiki/File:Spaghettieis_(fcm).jpg',taste:'바닐라 아이스크림을 눌러 뽑아 스파게티 면처럼 만들고, 딸기 소스를 토마토소스처럼 얹어요. 파마산 치즈처럼 보이는 건 보통 화이트초콜릿이나 코코넛이에요.',history:'1969년 만하임의 아이스크림 장인 다리오 폰타넬라가 만든 독일식 아이스크림 선데예요. 스파츨레 프레스를 이용해 아이스크림을 면 모양으로 뽑는 발상이 재미있죠. 파스타처럼 보여도 한 숟갈 뜨면 딸기와 바닐라의 익숙하고 달콤한 맛이 납니다.',year:'1969년 만하임에서 탄생',source:'https://www.deltaimquadrat.de/leben-im-delta-beitrag/dario-fontanella-erfindergeist-mit-leidenschaft.html',sourceLabel:'Delta im Quadrat · 발명가 인터뷰'},
+ {id:'canele',name:'카눌레',original:'Canelé de Bordeaux',place:'프랑스 · 보르도',tag:'겉바속촉 작은 종',image:'https://commons.wikimedia.org/wiki/Special:FilePath/Canele_retouched.jpg?width=1200',photo:'Wikimedia Commons · AlMare',photoLink:'https://commons.wikimedia.org/wiki/File:Canele_retouched.jpg',taste:'한입 베어 물면 두꺼운 캐러멜 껍질이 바삭, 안쪽은 커스터드처럼 부드러워요. 럼과 바닐라 향도 살짝 따라옵니다.',history:'보르도의 작은 홈 무늬 틀에서 구워내는 과자예요. 와인을 맑게 할 때 달걀흰자를 쓰고 남은 노른자를 활용해 수녀들이 만들었다는 이야기가 유명하지만, 정확한 기원은 확실하지 않아요. 보르도 와인 문화와 함께 전해지는 흥미로운 설 중 하나입니다.',year:'보르도 · 기원은 여러 설이 있어요',source:'https://www.nouvelle-aquitaine.fr/le-territoire/produits-de-nouvelle-aquitaine/le-cannele-bordelais',sourceLabel:'누벨아키텐 지역 공식 소개'},
+ {id:'santiago',name:'타르타 데 산티아고',original:'Tarta de Santiago',place:'스페인 · 갈리시아',tag:'성 야고보의 십자가 아몬드 케이크',image:'https://commons.wikimedia.org/wiki/Special:FilePath/Tarta_de_Santiago-2010.jpg?width=1200',photo:'Wikimedia Commons · Tamorlan',photoLink:'https://commons.wikimedia.org/wiki/File:Tarta_de_Santiago-2010.jpg',taste:'밀가루보다 아몬드와 달걀의 고소함이 중심인 케이크예요. 윗면의 슈거파우더 사이로 성 야고보의 십자가 무늬가 드러나요.',history:'산티아고 데 콤포스텔라 순례길과 깊이 이어진 갈리시아의 아몬드 케이크입니다. 유럽연합 자료에는 1577년 산티아고 대학 연회 기록이 가장 오래된 관련 문헌으로 언급돼요. 오늘날 익숙한 십자가 장식은 1924년 산티아고의 제과점 카사 모라에서 시작됐다고 합니다.',year:'1577년 문헌 기록 · 1924년 십자가 장식',source:'https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:C:2009:223:FULL',sourceLabel:'EU 관보 · Tarta de Santiago 역사'},
+];
+const cards=document.querySelector('#cards'),detail=document.querySelector('#detail');
+function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+cards.innerHTML=desserts.map((d,i)=>`<a class="card" href="#${d.id}" data-id="${d.id}" aria-label="${d.name} 이야기 보기"><img loading="lazy" src="${d.image}" alt="${d.name} 사진"><span class="card-index">0${i+1} / 05</span><div class="card-copy"><small>${d.place}</small><h3>${d.name}</h3><p>${d.tag}</p></div></a>`).join('');
+function show(id){const d=desserts.find(x=>x.id===id);if(!d){detail.classList.remove('open');detail.innerHTML='';return}const n=desserts.indexOf(d)+1;detail.innerHTML=`<div class="detail-top"><button class="back" type="button">← 디저트 목록</button><span class="detail-count">DESSERT ${String(n).padStart(2,'0')} / 05</span></div><div class="detail-grid"><div class="detail-photo"><img src="${d.image}" alt="${esc(d.name)} 사진"><p class="credit">사진: <a href="${d.photoLink}" target="_blank" rel="noreferrer">${esc(d.photo)}</a> · Wikimedia Commons</p></div><article class="detail-copy"><p class="eyebrow">${esc(d.place)}</p><h2>${esc(d.name)}</h2><p class="roman">${esc(d.original)}</p><p class="taste">${esc(d.taste)}</p><div class="fact"><b>한입 맛보기</b><p>${esc(d.tag)}. 사진처럼 생긴 모양과 달콤한 식감이 이 디저트의 매력이에요.</p></div><div class="fact"><b>유래와 역사</b><p>${esc(d.history)}</p></div><div class="fact"><b>기억할 연도</b><p>${esc(d.year)}</p></div><a class="source" href="${d.source}" target="_blank" rel="noreferrer">역사 출처 읽기 ↗ · ${esc(d.sourceLabel)}</a></article></div>`;detail.classList.add('open');detail.scrollIntoView({behavior:'smooth',block:'start'});detail.querySelector('.back').addEventListener('click',()=>{history.pushState(null,'',location.pathname+location.search);detail.classList.remove('open');detail.innerHTML='';document.querySelector('#cards').scrollIntoView({behavior:'smooth',block:'start'})})}
+function route(){show(location.hash.slice(1))}window.addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
